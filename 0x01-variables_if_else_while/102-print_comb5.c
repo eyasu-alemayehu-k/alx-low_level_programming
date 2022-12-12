@@ -7,32 +7,23 @@
  */
 int main(void)
 {
-	int t1, t2, o1, o2;
+	int i, j;
 
-	for (t2 = '0'; t2 <= '9'; t2++)
+	for (i = 0; i < 100; i++)
 	{
-		for (o2 = '0'; o2 <= '9'; o2++)
+		for (j = 0; j < 100; j++)
 		{
-			for (t1 = 0 + t2; t1 <= '9'; t1++)
+			if (i > j)
 			{
-				for (o1 = 0 + o2; o1 <= '9'; o1++)
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+				putchar(' ');
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				if (i != 98 || j != 99)
 				{
-					if (t2 != t1 || o2 != o1)
-					{
-					if (o2 < '8')
-					{
-						putchar(t2);
-						putchar(o2);
-						putchar(' ');
-						putchar(t1);
-						putchar(o1);
-					if (t2 != '9' || o2 != '8')
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
