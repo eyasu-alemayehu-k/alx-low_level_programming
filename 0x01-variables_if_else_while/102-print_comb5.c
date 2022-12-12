@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char t1,t2,o1,o2;
+	char t1, t2, o1, o2;
 
 	for (t2 = '0'; t2 <= '9'; t2++)
 	{
@@ -19,21 +19,24 @@ int main(void)
 				{
 					if (t2 != t1 || o2 != o1)
 					{
-						if (o2 < '8')
-						{
-							putchar(t2);
-							putchar(o2);
-							putchar(' ');
-							putchar(t1);
-							putchar(o1);
-							if (t2 != '9' || o2 != '8')
-							{
-								putchar(',');
-								putchar(' ');
-							}
-						}
+					if (o2 < '8')
+					{
+						putchar(t2);
+						putchar(o2);
+						putchar(' ');
+						putchar(t1);
+						putchar(o1);
+					if (t2 != '9' || o2 != '8')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					}
 					}
 				}
 			}
 		}
 	}
+	putchar('\n');
+	return (0);
+}
